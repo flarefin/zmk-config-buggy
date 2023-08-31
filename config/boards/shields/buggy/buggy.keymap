@@ -31,7 +31,7 @@
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                 &kp N       &kp R       &kp T       &kp S               &kp H       &kp A       &kp I       &kp E
 
-                                        &kp SPACE   &none               &none       &a2macro
+                                        &kp SPACE   &mo 2               &none       &a2macro
             >;
         };
 
