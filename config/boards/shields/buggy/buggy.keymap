@@ -14,7 +14,7 @@
 		    compatible = "zmk,behavior-macro";
 		    label = "MACRO1";
 	    	#binding-cells = <0>;
-	    	bindings = < &sl alpha2 >;
+	    	bindings = < &sl 1 >;
         };
     };
 
