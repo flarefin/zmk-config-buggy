@@ -5,7 +5,8 @@
 // Layers
 #define alpha1 0
 #define alpha2 1
-#define bt_layer 2
+#define symbol1 2
+#define bt_layer 3
 
 
 //        20 2  21    1  0  3
@@ -31,7 +32,7 @@
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                 &kp N       &kp R       &kp T       &kp S               &kp H       &kp A       &kp I       &kp E
 
-                                        &kp SPACE   &mo 2               &none       &a2macro
+                                        &kp SPACE   &mo 3               &mo 2       &a2macro
             >;
         };
 
@@ -43,23 +44,18 @@
                                         &kp SPACE   &none               &none       &none
             >;
         };
-/*
+
         symbol1 {
             bindings = <
                             &none       &none       &none               &none       &none       &none
-                &none       &none       &none       &none               &none       &none       &none       &none
+                &BSPC       &none       &none       &none               &none       &none       &none       &none
 
                                         &kp SPACE   &none               &none       &none
             >;
         };
-*/
+
         bt_layer {
             bindings = <
-                &bt BT_SEL 0
-                &bt BT_SEL 1
-                &bt BT_SEL 2
-                &bt BT_CLR
-
                             &none       &none       &none               &none       &none       &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
