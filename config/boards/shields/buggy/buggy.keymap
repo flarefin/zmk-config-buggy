@@ -2,12 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// Layers
-#define alpha1 0
-#define alpha2 1
-#define symbol1 2
-#define bt_layer 3
-
 
 //        20 2  21    1  0  3
 //     14 15 18 19    4  5  6  7
@@ -47,10 +41,19 @@
 
         symbol1 {
             bindings = <
-                            &none       &none       &none               &none       &none       &none
-                &kp BSPC    &none       &none       &none               &none       &none       &none       &none
+                            &kp BSLH    &kp FSLH    &kp TILDE           &kp UNDER   &kp DQT     &kp SEMI
+                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &kp AT
 
                                         &kp SPACE   &none               &none       &none
+            >;
+        };
+
+        system1 {
+            bindings = <
+                            &kp LG(C)   &kp UP      &kp LG(P)           &none       &none       &none
+                &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &none       &none       &none       &kp RET
+
+                                        &none       &none               &to 4       &none
             >;
         };
 
@@ -59,7 +62,7 @@
                             &none       &none       &none               &none       &none       &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
-                                        &kp SPACE   &none               &none       &none
+                                        &none       &none               &to 0       &none
 
             >;
         };
