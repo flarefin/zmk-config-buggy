@@ -1,0 +1,6 @@
+if SHIELD_BUGGY
+
+config ZMK_KEYBOARD_NAME
+    default "buggy"
+
+endif
