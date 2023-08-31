@@ -21,7 +21,7 @@
 	    	#binding-cells = <0>;
 	    	bindings = < &sl alpha2 >;
         };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
