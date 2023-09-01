@@ -2,34 +2,19 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// Layers
-#define a1 0
-#define a2 1
-#define s1 2
-#define n1 3
-#define bt 4
 
 //        20 2  21    1  0  3
 //     14 15 18 19    4  5  6  7
 //           16 10    9  8
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_test {
-            timeout-ms = <20>;
-            key-positions = <20 2 21>;
-            bindings = <&kp N2>;
-            layers = <a1>;
-        };
-    };
 
+/ {
     behaviors {
         a2macro: behavior_macro_1 {
 		    compatible = "zmk,behavior-macro";
 		    label = "MACRO1";
 	    	#binding-cells = <0>;
-	    	bindings = <&sl a2>;
+	    	bindings = < &sl 1 >;
         };
     };
 
@@ -41,7 +26,7 @@
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                 &kp N       &kp R       &kp T       &kp S               &kp H       &kp A       &kp I       &kp E
 
-                                        &kp SPACE   &mo n1              &mo s1      &a2macro
+                                        &kp SPACE   &mo 3               &mo 2       &a2macro
             >;
         };
 
@@ -50,7 +35,7 @@
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
                 &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
 
-                                        &kp SPACE   &mo n1              &mo s1      &to a1
+                                        &kp SPACE   &none               &none       &none
             >;
         };
 
@@ -63,21 +48,21 @@
             >;
         };
 
-        navigation1 {
+        system1 {
             bindings = <
                             &kp LG(C)   &kp UP      &kp LG(V)           &none       &none       &kp TAB
                 &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp LC(LEFT) &none      &kp LC(RIGHT) &kp RET
 
-                                        &none       &none               &to bt      &none
+                                        &none       &none               &to 4       &none
             >;
         };
 
-        bluetooth {
+        bt_layer {
             bindings = <
                             &none       &none       &none               &none       &none       &none
-                &none       &none       &none       &none               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
-                                        &none       &none               &to a1      &none
+                                        &none       &none               &to 0       &none
 
             >;
         };
