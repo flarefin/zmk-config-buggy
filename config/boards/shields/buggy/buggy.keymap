@@ -50,8 +50,8 @@
 
         system1 {
             bindings = <
-                            &kp LG(C)   &kp UP      &kp LG(V)           &none       &none       &none
-                &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &none       &none       &none       &kp RET
+                            &kp LG(C)   &kp UP      &kp LG(V)           &none       &none       &kp TAB
+                &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp LC(LEFT) &none      &kp LC(RIGHT) &kp RET
 
                                         &none       &none               &to 4       &none
             >;
