@@ -9,21 +9,22 @@
 #define n1 3
 #define bt 4
 
-
 //        20 2  21    1  0  3
 //     14 15 18 19    4  5  6  7
 //           16 10    9  8
 
 / {
+    /*
     combos {
         compatible = "zmk,combos";
-        combo_bt {
+        combo_test {
             timeout-ms = <20>;
             key-positions = <20 2 21>;
             bindings = <&kp N2>;
             layers = <a1>;
         };
     };
+    */
 
     behaviors {
         a2macro: behavior_macro_1 {
@@ -73,7 +74,7 @@
             >;
         };
 
-        bt_layer {
+        bluetooth {
             bindings = <
                             &none       &none       &none               &none       &none       &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
