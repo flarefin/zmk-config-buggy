@@ -2,11 +2,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-
 //        20 2  21    1  0  3
 //     14 15 18 19    4  5  6  7
 //           16 10    9  8
-
 
 / {
     behaviors {
@@ -35,7 +33,7 @@
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
                 &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
 
-                                        &kp SPACE   &none               &none       &none
+                                        &kp SPACE   &mo 3               &mo 2       &to 0
             >;
         };
 
