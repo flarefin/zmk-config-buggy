@@ -32,7 +32,7 @@
 	    	#binding-cells = <0>;
 	    	bindings = <&sl a2>;
         };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
