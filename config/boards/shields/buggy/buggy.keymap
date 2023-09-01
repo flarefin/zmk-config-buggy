@@ -7,6 +7,16 @@
 //           16 10    9  8
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_test {
+            timeout-ms = <20>;
+            key-positions = <15 20>;
+            bindings = <&kp a>;
+            layers = <0>;
+        };
+    };
+
     behaviors {
         a2macro: behavior_macro_1 {
 		    compatible = "zmk,behavior-macro";
@@ -19,7 +29,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        alpha1 {
+        alpha1 { // 0
             bindings = <
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                 &kp N       &kp R       &kp T       &kp S               &kp H       &kp A       &kp I       &kp E
@@ -28,7 +38,7 @@
             >;
         };
 
-        alpha2 {
+        alpha2 { // 1
             bindings = <
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
                 &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
@@ -37,7 +47,7 @@
             >;
         };
 
-        symbol1 {
+        symbol1 { // 2
             bindings = <
                             &kp BSLH    &kp FSLH    &kp TILDE           &kp UNDER   &kp DQT     &kp SEMI
                 &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &kp AT
@@ -46,7 +56,7 @@
             >;
         };
 
-        system1 {
+        system1 { // 3
             bindings = <
                             &kp LG(C)   &kp UP      &kp LG(V)           &none       &none       &kp TAB
                 &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp LC(LEFT) &none      &kp LC(RIGHT) &kp RET
@@ -55,7 +65,7 @@
             >;
         };
 
-        bt_layer {
+        bt_layer { // 4
             bindings = <
                             &none       &none       &none               &none       &none       &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
