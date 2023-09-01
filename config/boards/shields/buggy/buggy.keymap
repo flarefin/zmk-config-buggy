@@ -12,7 +12,7 @@
         combo_test {
             timeout-ms = <20>;
             key-positions = <15 20>;
-            bindings = <&kp a>;
+            bindings = <&kp A>;
             layers = <0>;
         };
     };
