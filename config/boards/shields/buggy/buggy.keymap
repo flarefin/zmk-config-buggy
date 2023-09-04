@@ -46,7 +46,7 @@
         alpha2 { // 1
             bindings = <
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
-                &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
+               hrml(P,          W,          B,          C)             hrmr(F,          Z,          DOT,        J)
 
                                         &kp SPACE   &mo 3               &mo 2       &to 0
             >;
