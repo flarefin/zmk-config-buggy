@@ -46,7 +46,7 @@
         alpha2 { // 1
             bindings = <
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
-               hrml(P,          W,          B,          C)             hrmr(F,          Z,          DOT,        J)
+                &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
 
                                         &kp SPACE   &mo 3               &mo 2       &to 0
             >;
@@ -73,7 +73,7 @@
         bt_layer { // 4
             bindings = <
                             &none       &none       &none               &none       &none       &none
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &out OUT_TOG &none      &none       &none
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none      &none       &none
 
                                         &none       &none               &to 0       &none
             >;
