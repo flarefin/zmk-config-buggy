@@ -12,6 +12,15 @@
 //           16 10    9  8
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_test {
+            timeout-ms = <30>;
+            key-positions = <1 0>;
+            bindings = <&kp A>;
+        };
+    };
+
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -73,7 +82,7 @@
         bt_layer { // 4
             bindings = <
                             &none       &none       &none               &none       &none       &none
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none      &none       &none
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
                                         &none       &none               &to 0       &none
             >;
