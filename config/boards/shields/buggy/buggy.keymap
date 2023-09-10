@@ -78,6 +78,43 @@
             bindings = <&ellimacro>;
             layers = <1>;
         };
+// s1
+        open1combo {
+            timeout-ms = <20>;
+            key-positions = <7 0>;
+            bindings = <&kp LBRC>;
+            layers = <2>;
+        };
+        open2combo {
+            timeout-ms = <20>;
+            key-positions = <8 1>;
+            bindings = <&kp LPAR>;
+            layers = <2>;
+        };
+        open3combo {
+            timeout-ms = <20>;
+            key-positions = <9 2>;
+            bindings = <&kp LBKT>;
+            layers = <2>;
+        };
+        close3combo {
+            timeout-ms = <20>;
+            key-positions = <10 3>;
+            bindings = <&kp RBKT>;
+            layers = <2>;
+        };
+        close2combo {
+            timeout-ms = <20>;
+            key-positions = <11 4>;
+            bindings = <&kp RPAR>;
+            layers = <2>;
+        };
+        close1combo {
+            timeout-ms = <20>;
+            key-positions = <12 5>;
+            bindings = <&kp RBRC>;
+            layers = <2>;
+        };
 
     };
 
