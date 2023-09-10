@@ -103,42 +103,42 @@
             compatible = "zmk,behavior-macro";
             label = "rlmacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp R &kp L>;
         };
         tdmacro: tdmacro {
             compatible = "zmk,behavior-macro";
             label = "tdmacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp T &kp D>;
         };
         ysmacro: ysmacro {
             compatible = "zmk,behavior-macro";
             label = "ysmacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp Y &kp S>;
         };
         hmmacro: hmmacro {
             compatible = "zmk,behavior-macro";
             label = "hmmacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp H &kp M>;
         };
         oamacro: oamacro {
             compatible = "zmk,behavior-macro";
             label = "oamacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp O &kp A>;
         };
         uimacro: uimacro {
             compatible = "zmk,behavior-macro";
             label = "uimacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp U &kp I>;
         };
 // a2
@@ -146,28 +146,28 @@
             compatible = "zmk,behavior-macro";
             label = "ckmacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp C &kp K>;
         };
         ffmacro: ffmacro {
             compatible = "zmk,behavior-macro";
             label = "ffmacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp F &kp F>;
         };
         quimacro: quimacro {
             compatible = "zmk,behavior-macro";
             label = "quimacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp Q &kp U &kp I>;
         };
         ellimacro: ellimacro {
             compatible = "zmk,behavior-macro";
             label = "ellimacro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings = <&kp DOT &kp DOT &kp DOT>;
         };
 
