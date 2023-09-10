@@ -66,6 +66,19 @@
             bindings = <&ffmacro>;
             layers = <1>;
         };
+        quicombo {
+            timeout-ms = <20>;
+            key-positions = <11 4>;
+            bindings = <&quimacro>;
+            layers = <1>;
+        };
+        ellicombo {
+            timeout-ms = <20>;
+            key-positions = <12 5>;
+            bindings = <&ellimacro>;
+            layers = <1>;
+        };
+
     };
 
     behaviors {
@@ -142,6 +155,20 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             bindings = <&kp F &kp F>;
+        };
+        quimacro: quimacro {
+            compatible = "zmk,behavior-macro";
+            label = "quimacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp Q &kp U &kp I>;
+        };
+        ellimacro: ellimacro {
+            compatible = "zmk,behavior-macro";
+            label = "ellimacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp DOT &kp DOT &kp DOT>;
         };
 
     };
