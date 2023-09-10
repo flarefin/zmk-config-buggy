@@ -7,13 +7,23 @@
 #define hrmr(k1,k2,k3,k4) &ht RCMD k1  &ht RSHFT k2  &ht RALT k3  &ht RCTRL k4
 
 
-//        20 2  21    1  0  3
-//     14 15 18 19    4  5  6  7
+//        0  1  2     3  4  5
+//     6  7  8  9     10 11 12 13
 
-//           16 10    9  8
+//           14 15    16 17
 
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        rlcombo {
+            timeout-ms = <20>;
+            key-positions = <7 0>;
+            bindings = <&rlmacro>;
+            layers = <0>;
+        };
+    };
+
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -25,20 +35,17 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-        a2macro: behavior_macro_1 {
+        a2macro: a2macro {
 		    compatible = "zmk,behavior-macro";
 		    label = "a2macro";
 	    	#binding-cells = <0>;
 	    	bindings = <&sl 1>;
         };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-        combo_test {
-            timeout-ms = <30>;
-            key-positions = <1 0>;
-            bindings = <&kp A>;
+        rlmacro: rlmacro {
+            compatible = "zmk,behavior-macro";
+            label = "rlmacro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp L>;
         };
     };
 
