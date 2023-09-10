@@ -22,6 +22,37 @@
             bindings = <&rlmacro>;
             layers = <0>;
         };
+        tdcombo {
+            timeout-ms = <20>;
+            key-positions = <7 0>;
+            bindings = <&tdmacro>;
+            layers = <0>;
+        };
+        yscombo {
+            timeout-ms = <20>;
+            key-positions = <7 0>;
+            bindings = <&ysmacro>;
+            layers = <0>;
+        };
+        hmcombo {
+            timeout-ms = <20>;
+            key-positions = <7 0>;
+            bindings = <&hmmacro>;
+            layers = <0>;
+        };
+        oacombo {
+            timeout-ms = <20>;
+            key-positions = <7 0>;
+            bindings = <&oamacro>;
+            layers = <0>;
+        };
+        uicombo {
+            timeout-ms = <20>;
+            key-positions = <7 0>;
+            bindings = <&uimacro>;
+            layers = <0>;
+        };
+
     };
 
     behaviors {
@@ -45,8 +76,45 @@
             compatible = "zmk,behavior-macro";
             label = "rlmacro";
             #binding-cells = <0>;
+            wait-ms = <10>;
             bindings = <&kp R &kp L>;
         };
+        tdmacro: tdmacro {
+            compatible = "zmk,behavior-macro";
+            label = "tdmacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp T &kp D>;
+        };
+        ysmacro: ysmacro {
+            compatible = "zmk,behavior-macro";
+            label = "ysmacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp Y &kp S>;
+        };
+        hmmacro: hmmacro {
+            compatible = "zmk,behavior-macro";
+            label = "hmmacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp H &kp M>;
+        };
+        oamacro: oamacro {
+            compatible = "zmk,behavior-macro";
+            label = "oamacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp O &kp A>;
+        };
+        uimacro: uimacro {
+            compatible = "zmk,behavior-macro";
+            label = "uimacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp U &kp I>;
+        };
+
     };
 
     keymap {
