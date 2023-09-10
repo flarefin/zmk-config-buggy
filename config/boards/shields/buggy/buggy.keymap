@@ -16,6 +16,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+// a1
         rlcombo {
             timeout-ms = <20>;
             key-positions = <7 0>;
@@ -24,35 +25,47 @@
         };
         tdcombo {
             timeout-ms = <20>;
-            key-positions = <7 0>;
+            key-positions = <8 1>;
             bindings = <&tdmacro>;
             layers = <0>;
         };
         yscombo {
             timeout-ms = <20>;
-            key-positions = <7 0>;
+            key-positions = <9 2>;
             bindings = <&ysmacro>;
             layers = <0>;
         };
         hmcombo {
             timeout-ms = <20>;
-            key-positions = <7 0>;
+            key-positions = <10 3>;
             bindings = <&hmmacro>;
             layers = <0>;
         };
         oacombo {
             timeout-ms = <20>;
-            key-positions = <7 0>;
+            key-positions = <11 4>;
             bindings = <&oamacro>;
             layers = <0>;
         };
         uicombo {
             timeout-ms = <20>;
-            key-positions = <7 0>;
+            key-positions = <12 5>;
             bindings = <&uimacro>;
             layers = <0>;
         };
-
+// a2
+        ckcombo {
+            timeout-ms = <20>;
+            key-positions = <9 2>;
+            bindings = <&ckmacro>;
+            layers = <1>;
+        };
+        ffcombo {
+            timeout-ms = <20>;
+            key-positions = <10 3>;
+            bindings = <&ffmacro>;
+            layers = <1>;
+        };
     };
 
     behaviors {
@@ -72,6 +85,7 @@
 	    	#binding-cells = <0>;
 	    	bindings = <&sl 1>;
         };
+// a1
         rlmacro: rlmacro {
             compatible = "zmk,behavior-macro";
             label = "rlmacro";
@@ -113,6 +127,21 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             bindings = <&kp U &kp I>;
+        };
+// a2
+        ckmacro: ckmacro {
+            compatible = "zmk,behavior-macro";
+            label = "ckmacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp C &kp K>;
+        };
+        ffmacro: ffmacro {
+            compatible = "zmk,behavior-macro";
+            label = "ffmacro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings = <&kp F &kp F>;
         };
 
     };
