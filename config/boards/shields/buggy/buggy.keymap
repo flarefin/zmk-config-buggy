@@ -6,12 +6,18 @@
 #define hrml(k1,k2,k3,k4) &ht LCTRL k1  &ht LALT k2  &ht LSHFT k3  &ht LCMD k4
 #define hrmr(k1,k2,k3,k4) &ht RCMD k1  &ht RSHFT k2  &ht RALT k3  &ht RCTRL k4
 
+#define a1 0
+#define a2 1
+#define s1 2
+#define s2 3
+#define num 4
+#define nav 5
+#define bt 6
 
 //        0  1  2     3  4  5
 //     6  7  8  9     10 11 12 13
 
 //           14 15    16 17
-
 
 / {
     combos {
@@ -21,99 +27,99 @@
             timeout-ms = <20>;
             key-positions = <7 0>;
             bindings = <&rlmacro>;
-            layers = <0>;
+            layers = <a1>;
         };
         tdcombo {
             timeout-ms = <20>;
             key-positions = <8 1>;
             bindings = <&tdmacro>;
-            layers = <0>;
+            layers = <a1>;
         };
         yscombo {
             timeout-ms = <20>;
             key-positions = <9 2>;
             bindings = <&ysmacro>;
-            layers = <0>;
+            layers = <a1>;
         };
         hmcombo {
             timeout-ms = <20>;
             key-positions = <10 3>;
             bindings = <&hmmacro>;
-            layers = <0>;
+            layers = <a1>;
         };
         oacombo {
             timeout-ms = <20>;
             key-positions = <11 4>;
             bindings = <&oamacro>;
-            layers = <0>;
+            layers = <a1>;
         };
         uicombo {
             timeout-ms = <20>;
             key-positions = <12 5>;
             bindings = <&uimacro>;
-            layers = <0>;
+            layers = <a1>;
         };
 // a2
         ckcombo {
             timeout-ms = <20>;
             key-positions = <9 2>;
             bindings = <&ckmacro>;
-            layers = <1>;
+            layers = <a2>;
         };
         ffcombo {
             timeout-ms = <20>;
             key-positions = <10 3>;
             bindings = <&ffmacro>;
-            layers = <1>;
+            layers = <a2>;
         };
         quicombo {
             timeout-ms = <20>;
             key-positions = <11 4>;
             bindings = <&quimacro>;
-            layers = <1>;
+            layers = <a2>;
         };
         ellicombo {
             timeout-ms = <20>;
             key-positions = <12 5>;
             bindings = <&ellimacro>;
-            layers = <1>;
+            layers = <a2>;
         };
 // s1
         open1combo {
             timeout-ms = <20>;
             key-positions = <7 0>;
             bindings = <&kp LBRC>;
-            layers = <2>;
+            layers = <s1>;
         };
         open2combo {
             timeout-ms = <20>;
             key-positions = <8 1>;
             bindings = <&kp LPAR>;
-            layers = <2>;
+            layers = <s1>;
         };
         open3combo {
             timeout-ms = <20>;
             key-positions = <9 2>;
             bindings = <&kp LBKT>;
-            layers = <2>;
+            layers = <s1>;
         };
         close3combo {
             timeout-ms = <20>;
             key-positions = <10 3>;
             bindings = <&kp RBKT>;
-            layers = <2>;
+            layers = <s1>;
         };
         close2combo {
             timeout-ms = <20>;
             key-positions = <11 4>;
             bindings = <&kp RPAR>;
-            layers = <2>;
+            layers = <s1>;
         };
         close1combo {
             timeout-ms = <20>;
             key-positions = <12 5>;
             bindings = <&kp RBRC>;
-            layers = <2>;
+            layers = <s1>;
         };
 
     };
@@ -124,7 +130,7 @@
             label = "hold_tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <160>;
+            tapping-term-ms = <185>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -133,7 +139,7 @@
 		    compatible = "zmk,behavior-macro";
 		    label = "a2macro";
 	    	#binding-cells = <0>;
-	    	bindings = <&sl 1>;
+	    	bindings = <&sl a2>;
         };
 // a1
         rlmacro: rlmacro {
@@ -213,48 +219,66 @@
     keymap {
         compatible = "zmk,keymap";
 
-        alpha1 { // 0
+        alpha1 {
             bindings = <
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                hrml(N,          R,          T,          S)             hrmr(H,          A,          I,          E)
 
-                                        &kp SPACE   &mo 3               &mo 2       &a2macro
+                                        &kp SPACE   &mo nav             &mo s1      &a2macro
             >;
         };
 
-        alpha2 { // 1
+        alpha2 {
             bindings = <
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
                 &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
 
-                                        &kp SPACE   &mo 3               &mo 2       &to 0
+                                        &kp SPACE   &mo nav             &mo s1      &to 0
             >;
         };
 
-        symbol1 { // 2
+        symbol1 {
             bindings = <
-                            &kp BSLH    &kp FSLH    &kp TILDE           &kp UNDER   &kp DQT     &kp SEMI
-                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &kp AT
+                            &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
+                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &mo num
+
+                                        &kp SPACE   &mo s2               &none       &none
+            >;
+        };
+
+        symbol2 {
+            bindings = <
+                            &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
+                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &mo num
 
                                         &kp SPACE   &none               &none       &none
             >;
         };
 
-        system1 { // 3
+        numbers {
+            bindings = <
+                            &kp N6      &kp N7      &kp COMMA           &kp DOT     &kp N4      &kp N5
+                &kp BSPC    &kp N1      &kp N2      &kp N3              &kp N8      &kp N9      &kp N0      &none
+
+                                        &kp SPACE   &none               &none       &none
+            >;
+        };
+
+        navigation {
             bindings = <
                             &kp LG(C)   &kp UP      &kp LG(V)           &none       &none       &kp TAB
                 &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp LC(LEFT) &none      &kp LC(RIGHT) &kp RET
 
-                                        &none       &none               &to 4       &none
+                                        &none       &none               &to bt      &none
             >;
         };
 
-        bt_layer { // 4
+        bluetooth {
             bindings = <
                             &none       &none       &none               &none       &none       &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
-                                        &none       &none               &to 0       &none
+                                        &none       &none               &to a1      &none
             >;
         };
     };
