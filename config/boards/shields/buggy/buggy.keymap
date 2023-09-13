@@ -6,13 +6,13 @@
 #define hrml(k1,k2,k3,k4) &ht LCTRL k1  &ht LALT k2  &ht LSHFT k3  &ht LCMD k4
 #define hrmr(k1,k2,k3,k4) &ht RCMD k1  &ht RSHFT k2  &ht RALT k3  &ht RCTRL k4
 
-#define a1 0
-#define a2 1
-#define s1 2
-#define s2 3
-#define num 4
-#define nav 5
-#define bt 6
+#define A1 0
+#define A2 1
+#define S1 2
+#define S2 3
+#define NUM 4
+#define NAV 5
+#define BT 6
 
 //        0  1  2     3  4  5
 //     6  7  8  9     10 11 12 13
@@ -27,99 +27,99 @@
             timeout-ms = <20>;
             key-positions = <7 0>;
             bindings = <&rlmacro>;
-            layers = <a1>;
+            layers = <A1>;
         };
         tdcombo {
             timeout-ms = <20>;
             key-positions = <8 1>;
             bindings = <&tdmacro>;
-            layers = <a1>;
+            layers = <A1>;
         };
         yscombo {
             timeout-ms = <20>;
             key-positions = <9 2>;
             bindings = <&ysmacro>;
-            layers = <a1>;
+            layers = <A1>;
         };
         hmcombo {
             timeout-ms = <20>;
             key-positions = <10 3>;
             bindings = <&hmmacro>;
-            layers = <a1>;
+            layers = <A1>;
         };
         oacombo {
             timeout-ms = <20>;
             key-positions = <11 4>;
             bindings = <&oamacro>;
-            layers = <a1>;
+            layers = <A1>;
         };
         uicombo {
             timeout-ms = <20>;
             key-positions = <12 5>;
             bindings = <&uimacro>;
-            layers = <a1>;
+            layers = <A1>;
         };
 // a2
         ckcombo {
             timeout-ms = <20>;
             key-positions = <9 2>;
             bindings = <&ckmacro>;
-            layers = <a2>;
+            layers = <A2>;
         };
         ffcombo {
             timeout-ms = <20>;
             key-positions = <10 3>;
             bindings = <&ffmacro>;
-            layers = <a2>;
+            layers = <A2>;
         };
         quicombo {
             timeout-ms = <20>;
             key-positions = <11 4>;
             bindings = <&quimacro>;
-            layers = <a2>;
+            layers = <A2>;
         };
         ellicombo {
             timeout-ms = <20>;
             key-positions = <12 5>;
             bindings = <&ellimacro>;
-            layers = <a2>;
+            layers = <A2>;
         };
 // s1
         open1combo {
             timeout-ms = <20>;
             key-positions = <7 0>;
             bindings = <&kp LBRC>;
-            layers = <s1>;
+            layers = <S1>;
         };
         open2combo {
             timeout-ms = <20>;
             key-positions = <8 1>;
             bindings = <&kp LPAR>;
-            layers = <s1>;
+            layers = <S1>;
         };
         open3combo {
             timeout-ms = <20>;
             key-positions = <9 2>;
             bindings = <&kp LBKT>;
-            layers = <s1>;
+            layers = <S1>;
         };
         close3combo {
             timeout-ms = <20>;
             key-positions = <10 3>;
             bindings = <&kp RBKT>;
-            layers = <s1>;
+            layers = <S1>;
         };
         close2combo {
             timeout-ms = <20>;
             key-positions = <11 4>;
             bindings = <&kp RPAR>;
-            layers = <s1>;
+            layers = <S1>;
         };
         close1combo {
             timeout-ms = <20>;
             key-positions = <12 5>;
             bindings = <&kp RBRC>;
-            layers = <s1>;
+            layers = <S1>;
         };
 
     };
@@ -135,11 +135,11 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-        a2macro: a2macro {
+        A2macro: A2macro {
 		    compatible = "zmk,behavior-macro";
-		    label = "a2macro";
+		    label = "A2macro";
 	    	#binding-cells = <0>;
-	    	bindings = <&sl a2>;
+	    	bindings = <&sl A2>;
         };
 // a1
         rlmacro: rlmacro {
@@ -224,7 +224,7 @@
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                hrml(N,          R,          T,          S)             hrmr(H,          A,          I,          E)
 
-                                        &kp SPACE   &mo nav             &mo s1      &a2macro
+                                        &kp SPACE   &mo NAV             &mo S1      &A2macro
             >;
         };
 
@@ -233,7 +233,7 @@
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
                 &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
 
-                                        &kp SPACE   &mo nav             &mo s1      &to a1
+                                        &kp SPACE   &mo NAV             &mo S1      &to A1
             >;
         };
 
@@ -242,7 +242,7 @@
                             &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
                 &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &mo num
 
-                                        &kp SPACE   &mo s2              &none       &none
+                                        &kp SPACE   &mo S2              &none       &none
             >;
         };
 
@@ -269,7 +269,7 @@
                             &kp LG(C)   &kp UP      &kp LG(V)           &kp PSCRN   &kp PG_UP   &kp TAB
                 &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp HOME    &kp PG_DN   &kp END     &kp RET
 
-                                        &none       &none               &to bt      &none
+                                        &none       &none               &to BT      &none
             >;
         };
 
@@ -278,7 +278,7 @@
                             &none       &none       &none               &none       &none       &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
-                                        &none       &none               &to a1      &none
+                                        &none       &none               &to A1      &none
             >;
         };
     };
