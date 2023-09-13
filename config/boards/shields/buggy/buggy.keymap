@@ -233,7 +233,7 @@
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
                 &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
 
-                                        &kp SPACE   &mo nav             &mo s1      &to 0
+                                        &kp SPACE   &mo nav             &mo s1      &to a1
             >;
         };
 
@@ -242,14 +242,14 @@
                             &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
                 &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &mo num
 
-                                        &kp SPACE   &mo s2               &none       &none
+                                        &kp SPACE   &mo s2              &none       &none
             >;
         };
 
         symbol2 {
             bindings = <
                             &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
-                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &mo num
+                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &none
 
                                         &kp SPACE   &none               &none       &none
             >;
@@ -266,8 +266,8 @@
 
         navigation {
             bindings = <
-                            &kp LG(C)   &kp UP      &kp LG(V)           &none       &none       &kp TAB
-                &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp LC(LEFT) &none      &kp LC(RIGHT) &kp RET
+                            &kp LG(C)   &kp UP      &kp LG(V)           &kp PSCRN   &kp PG_UP   &kp TAB
+                &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp HOME    &kp PG_DN   &kp END     &kp RET
 
                                         &none       &none               &to bt      &none
             >;
