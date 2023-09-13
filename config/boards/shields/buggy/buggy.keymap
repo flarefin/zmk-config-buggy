@@ -240,7 +240,7 @@
         symbol1 {
             bindings = <
                             &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
-                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &mo num
+                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &mo NUM
 
                                         &kp SPACE   &mo S2              &none       &none
             >;
