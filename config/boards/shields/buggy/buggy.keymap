@@ -13,6 +13,7 @@
 #define NUM 4
 #define NAV 5
 #define BT 6
+#define GM1 7
 
 //        0  1  2     3  4  5
 //     6  7  8  9     10 11 12 13
@@ -130,7 +131,7 @@
             label = "hold_tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <185>;
+            tapping-term-ms = <190>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -269,7 +270,7 @@
                             &kp LG(C)   &kp UP      &kp LG(V)           &kp PSCRN   &kp PG_UP   &kp TAB
                 &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp HOME    &kp PG_DN   &kp END     &kp RET
 
-                                        &none       &none               &to BT      &none
+                                        &none       &none               &to BT      &to GM1
             >;
         };
 
@@ -279,6 +280,15 @@
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
                                         &none       &none               &to A1      &none
+            >;
+        };
+
+        gaming1 {
+            bindings = <
+                            &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
+                &kp N       &kp R       &kp T       &kp S               &kp H       &kp A       &kp I       &kp E
+
+                                        &kp SPACE   &to A1              &kp W       &kp C
             >;
         };
     };
