@@ -11,9 +11,11 @@
 #define S1 2
 #define S2 3
 #define NUM 4
-#define NAV 5
-#define BT 6
-#define GM1 7
+#define NAV1 5
+#define NAV2 6
+#define BT 7
+#define GM1 8
+#define GM2 9
 
 //        0  1  2     3  4  5
 //     6  7  8  9     10 11 12 13
@@ -121,6 +123,13 @@
             key-positions = <12 5>;
             bindings = <&kp RBRC>;
             layers = <S1>;
+        };
+// nav
+        btlayercombo {
+            timeout-ms = <30>;
+            key-positions = <3 4 5>;
+            bindings = <&to BT>;
+            layers = <NAV1>;
         };
 
     };
@@ -234,7 +243,7 @@
                             &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
                 &kp P       &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &kp J
 
-                                        &kp SPACE   &mo NAV             &mo S1      &to A1
+                                        &kp SPACE   &mo NAV1            &mo S1      &to A1
             >;
         };
 
@@ -265,12 +274,12 @@
             >;
         };
 
-        navigation {
+        navigation1 {
             bindings = <
                             &kp LG(C)   &kp UP      &kp LG(V)           &kp PSCRN   &kp PG_UP   &kp TAB
                 &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT           &kp HOME    &kp PG_DN   &kp END     &kp RET
 
-                                        &none       &none               &to BT      &to GM1
+                                        &none       &none               &mo NAV2    &to GM1
             >;
         };
 
@@ -279,7 +288,7 @@
                             &none       &none       &none               &none       &none       &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &none       &none       &none       &none
 
-                                        &none       &none               &to A1      &none
+                                        &none       &none               &none       &to A1
             >;
         };
 
@@ -288,7 +297,16 @@
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                 &kp N       &kp R       &kp T       &kp S               &kp H       &kp A       &kp I       &kp E
 
-                                        &kp SPACE   &to A1              &kp W       &kp C
+                                        &kp SPACE   &mo GM2             &kp J       &kp P
+            >;
+        };
+
+        gaming2 {
+            bindings = <
+                            &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
+                &kp ESC     &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &to A1
+
+                                        &none       &none               &kp ENTER   &kp BSPC
             >;
         };
     };
