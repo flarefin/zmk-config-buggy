@@ -234,7 +234,7 @@
                             &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
                hrml(N,          R,          T,          S)             hrmr(H,          A,          I,          E)
 
-                                        &kp SPACE   &mo NAV             &mo S1      &A2macro
+                                        &kp SPACE   &mo NAV1            &mo S1      &A2macro
             >;
         };
 
