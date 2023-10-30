@@ -16,6 +16,8 @@
 #define BT 7
 #define GM1 8
 #define GM2 9
+#define CB1 10
+#define CB2 11
 
 //        0  1  2     3  4  5
 //     6  7  8  9     10 11 12 13
@@ -151,47 +153,53 @@
 	    	#binding-cells = <0>;
 	    	bindings = <&sl A2>;
         };
+        CB2macro: CB2macro {
+		    compatible = "zmk,behavior-macro";
+		    label = "CB2macro";
+	    	#binding-cells = <0>;
+	    	bindings = <&sl CB2>;
+        };
 // a1
         rlmacro: rlmacro {
             compatible = "zmk,behavior-macro";
             label = "rlmacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp R &kp L>;
         };
         tdmacro: tdmacro {
             compatible = "zmk,behavior-macro";
             label = "tdmacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp T &kp D>;
         };
         ysmacro: ysmacro {
             compatible = "zmk,behavior-macro";
             label = "ysmacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp Y &kp S>;
         };
         hmmacro: hmmacro {
             compatible = "zmk,behavior-macro";
             label = "hmmacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp H &kp M>;
         };
         oamacro: oamacro {
             compatible = "zmk,behavior-macro";
             label = "oamacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp O &kp A>;
         };
         uimacro: uimacro {
             compatible = "zmk,behavior-macro";
             label = "uimacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp U &kp I>;
         };
 // a2
@@ -199,29 +207,366 @@
             compatible = "zmk,behavior-macro";
             label = "ckmacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp C &kp K>;
         };
         ffmacro: ffmacro {
             compatible = "zmk,behavior-macro";
             label = "ffmacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp F &kp F>;
         };
         quimacro: quimacro {
             compatible = "zmk,behavior-macro";
             label = "quimacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp Q &kp U &kp I>;
         };
         ellimacro: ellimacro {
             compatible = "zmk,behavior-macro";
             label = "ellimacro";
             #binding-cells = <0>;
-            wait-ms = <5>;
+            wait-ms = <0>;
             bindings = <&kp DOT &kp DOT &kp DOT>;
+        };
+// cubing
+        c_D: c_D {
+            compatible = "zmk,behavior-macro";
+            label = "c_D";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_L: c_L {
+            compatible = "zmk,behavior-macro";
+            label = "c_L";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Lp: c_Lp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Lp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Up: c_Up {
+            compatible = "zmk,behavior-macro";
+            label = "c_Up";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_U: c_U {
+            compatible = "zmk,behavior-macro";
+            label = "c_U";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Fp: c_Fp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Fp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_F: c_F {
+            compatible = "zmk,behavior-macro";
+            label = "c_F";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Rwp: c_Rwp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Rwp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp R &kp SQT &kp SPACE>
+                ;
+        };
+        c_Rw: c_Rw {
+            compatible = "zmk,behavior-macro";
+            label = "c_Rw";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp R kp SPACE>
+                ;
+        };
+        c_Rp: c_Rp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Rp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp R>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_R: c_R {
+            compatible = "zmk,behavior-macro";
+            label = "c_R";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp R>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Mp: c_Mp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Mp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp M>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_M: c_M {
+            compatible = "zmk,behavior-macro";
+            label = "c_M";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp M>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Dp: c_Dp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Dp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_2: c_2 {
+            compatible = "zmk,behavior-macro";
+            label = "c_2";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp BSPC &kp N2 &kp SPACE>
+                ;
+        };
+        c_enter: c_enter {
+            compatible = "zmk,behavior-macro";
+            label = "c_enter";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp BSPC>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp RET>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        c_E: c_E {
+            compatible = "zmk,behavior-macro";
+            label = "c_E";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Ep: c_Ep {
+            compatible = "zmk,behavior-macro";
+            label = "c_Ep";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Sp: c_Sp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Sp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_S: c_S {
+            compatible = "zmk,behavior-macro";
+            label = "c_S";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_B: c_B {
+            compatible = "zmk,behavior-macro";
+            label = "c_B";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp B>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_Bp: c_Bp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Bp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp B>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+        c_X: c_X {
+            compatible = "zmk,behavior-macro";
+            label = "c_X";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp X &kp SPACE>
+                ;
+        };
+        c_Xp: c_Xp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Xp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp X &kp SQT &kp SPACE>
+                ;
+        };
+        c_Y: c_Y {
+            compatible = "zmk,behavior-macro";
+            label = "c_Y";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp Y &kp SPACE>
+                ;
+        };
+        c_Yp: c_Yp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Yp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp Y &kp SQT &kp SPACE>
+                ;
+        };
+        c_Z: c_Z {
+            compatible = "zmk,behavior-macro";
+            label = "c_Z";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp Z &kp SPACE>
+                ;
+        };
+        c_Zp: c_Zp {
+            compatible = "zmk,behavior-macro";
+            label = "c_Zp";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp Z &kp SQT &kp SPACE>
+                ;
+        };
+        c_RPAR: c_RPAR {
+            compatible = "zmk,behavior-macro";
+            label = "c_RPAR";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp BSPC &kp RPAR &kp SPACE>
+                ;
+        };
+        c_comment: c_comment {
+            compatible = "zmk,behavior-macro";
+            label = "c_comment";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap &kp FSLH &kp FSLH &kp SPACE &to A1>
+                ;
         };
 
     };
@@ -318,5 +663,24 @@
                                         &none       &none               &kp ENTER   &kp BSPC
             >;
         };
+
+        cubing1 {
+            bindings = <
+                            &c_Lp       &c_U        &c_F                &c_Rw       &c_R        &c_M
+                &c_D        &c_L        &c_Up       &c_Fp               &c_Rwp      &c_Rp       &c_Mp     &c_Dp
+
+                                        &c_2        &c_enter            &kp BSPC    &CB2macro
+            >;
+        };
+
+        cubing2 {
+            bindings = <
+                            &c_Ep       &c_S        &c_Bp               &c_Xp       &c_Yp       &c_Zp
+                &kp LPAR    &c_E        &c_Sp       &c_B                &c_X        &c_Y        &c_Z      &c_RPAR
+
+                                        &to A1      &c_comment          &none       &to CB1
+            >;
+        };
+
     };
 };
