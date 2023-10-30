@@ -604,7 +604,7 @@
         symbol2 {
             bindings = <
                             &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
-                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &none
+                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &to CB1
 
                                         &kp SPACE   &none               &none       &none
             >;
