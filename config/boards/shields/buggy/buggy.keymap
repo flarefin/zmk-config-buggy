@@ -394,7 +394,7 @@
             wait-ms = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp F>
+                , <&macro_tap &kp D>
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp SQT>
                 , <&macro_tap &kp SPACE>
