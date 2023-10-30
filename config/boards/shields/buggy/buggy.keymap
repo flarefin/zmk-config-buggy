@@ -334,7 +334,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_tap &kp R kp SPACE>
+                = <&macro_tap &kp R &kp SPACE>
                 ;
         };
         c_Rp: c_Rp {
