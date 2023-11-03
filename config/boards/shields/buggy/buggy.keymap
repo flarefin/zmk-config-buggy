@@ -568,7 +568,7 @@
                 = <&macro_tap &kp FSLH &kp FSLH &kp SPACE &to A1>
                 ;
         };
-// other things
+// discord
         d_codeblock: d_codeblock {
             compatible = "zmk,behavior-macro";
             label = "d_codeblock";
@@ -596,7 +596,29 @@
                     >
                 ;
         };
-
+// vim
+        v_save: v_save {
+            compatible = "zmk,behavior-macro";
+            label = "v_save";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap
+                    &kp COLON &kp W &kp RET
+                    >
+                ;
+        };
+        v_exit: v_exit {
+            compatible = "zmk,behavior-macro";
+            label = "v_exit";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap
+                    &kp COLON &kp Q &kp RET
+                    >
+                ;
+        };
 
     };
 
@@ -632,10 +654,10 @@
 
         symbol2 {
             bindings = <
-                            &kp BSLH    &kp FSLH    &kp AT              &kp UNDER   &kp DQT     &kp SEMI
-                &kp BSPC    &kp EXCL    &kp QMARK   &kp GRAVE           &kp MINUS   &kp SQT     &kp COLON   &to CB1
+                            &kp LT      &kp GT      &kp TILDE           &kp HASH    &kp AMPS    &kp PIPE
+                &kp BSPC    &kp DLLR    &kp CARET   &kp PRCNT           &kp PLUS    &kp STAR    &kp EQUAL   &to CB1
 
-                                        &kp SPACE   &none               &none       &none
+                                        &none       &none               &none       &kp SPACE
             >;
         };
 
