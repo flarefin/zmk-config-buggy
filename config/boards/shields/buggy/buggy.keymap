@@ -568,6 +568,35 @@
                 = <&macro_tap &kp FSLH &kp FSLH &kp SPACE &to A1>
                 ;
         };
+// other things
+        d_codeblock: d_codeblock {
+            compatible = "zmk,behavior-macro";
+            label = "d_codeblock";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap
+                    &kp GRAVE &kp GRAVE &kp GRAVE
+                    &kp RET &kp RET
+                    &kp GRAVE &kp GRAVE &kp GRAVE
+                    &kp UP
+                    >
+                ;
+        };
+        d_cmini: d_cmini {
+            compatible = "zmk,behavior-macro";
+            label = "d_cmini";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_tap
+                    &kp EXCL
+                    &kp C &kp M &kp I &kp N &kp I
+                    &kp SPACE
+                    >
+                ;
+        };
+
 
     };
 
