@@ -126,11 +126,35 @@
             bindings = <&kp RBRC>;
             layers = <S1>;
         };
+        cminicombo {
+            timeout-ms = <20>;
+            key-positions = <7 8>;
+            bindings = <&d_cmini>;
+            layers = <S1>;
+        };
+        codeblockcombo {
+            timeout-ms = <20>;
+            key-positions = <8 9>;
+            bindings = <&d_codeblock>;
+            layers = <S1>;
+        };
 // nav
         btlayercombo {
             timeout-ms = <30>;
             key-positions = <3 4 5>;
             bindings = <&to BT>;
+            layers = <NAV1>;
+        };
+        savecombo {
+            timeout-ms = <20>;
+            key-positions = <10 11>;
+            bindings = <&v_save>;
+            layers = <NAV1>;
+        };
+        exitcombo {
+            timeout-ms = <20>;
+            key-positions = <11 12>;
+            bindings = <&v_exit>;
             layers = <NAV1>;
         };
 
@@ -603,9 +627,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_tap
-                    &kp COLON &kp W &kp RET
-                    >
+                = <&macro_tap &kp COLON &kp W &kp RET>
                 ;
         };
         v_exit: v_exit {
@@ -614,11 +636,33 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_tap
-                    &kp COLON &kp Q &kp RET
-                    >
+                = <&macro_tap &kp COLON &kp Q &kp RET>
                 ;
         };
+// osu
+        o_volup: o_volup {
+            compatible = "zmk,behavior-macro";
+            label = "o_volup";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        o_voldown: o_voldown {
+            compatible = "zmk,behavior-macro";
+            label = "o_voldown";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
 
     };
 
@@ -708,8 +752,8 @@
 
         gaming2 {
             bindings = <
-                            &kp X       &kp V       &kp G               &kp K       &kp Q       &kp COMMA
-                &kp ESC     &kp W       &kp B       &kp C               &kp F       &kp Z       &kp DOT     &to A1
+                            &kp TAB     &kp V       &o_volup            &kp K       &kp Q       &kp COMMA
+                &kp ESC     &kp W       &kp B       &o_voldown          &kp F       &kp Z       &kp DOT     &to A1
 
                                         &none       &none               &kp ENTER   &kp BSPC
             >;
