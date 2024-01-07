@@ -743,17 +743,17 @@
 
         gaming1 {
             bindings = <
-                            &kp L       &kp D       &kp Y               &kp M       &kp O       &kp U
-                &kp N       &kp R       &kp T       &kp S               &kp H       &kp A       &kp I       &kp E
+                            &kp Z       &kp W       &kp X               &kp M       &kp UP      &kp U
+                &kp LSHIFT  &kp A       &kp S       &kp D               &kp LEFT    &kp DOWN    &kp RIGHT   &kp E
 
-                                        &kp SPACE   &mo GM2             &kp J       &kp P
+                                        &kp SPACE   &mo GM2             &kp R       &kp P
             >;
         };
 
         gaming2 {
             bindings = <
                             &kp TAB     &kp V       &o_volup            &kp K       &kp Q       &kp COMMA
-                &kp ESC     &kp W       &kp B       &o_voldown          &kp F       &kp Z       &kp DOT     &to A1
+                &kp ESC     &kp T       &kp B       &o_voldown          &kp F       &kp L       &kp DOT     &to A1
 
                                         &none       &none               &kp ENTER   &kp BSPC
             >;
