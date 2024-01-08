@@ -753,7 +753,7 @@
         gaming2 {
             bindings = <
                             &kp TAB     &kp V       &o_volup            &kp K       &kp Q       &kp COMMA
-                &kp ESC     &kp T       &kp B       &o_voldown          &kp F       &kp L       &kp DOT     &to A1
+                &kp ESC     &kp T       &kp B       &o_voldown          &kp F       &kp F4      &kp DOT     &to A1
 
                                         &none       &none               &kp ENTER   &kp BSPC
             >;
