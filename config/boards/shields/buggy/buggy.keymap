@@ -743,10 +743,10 @@
 
         gaming1 {
             bindings = <
-                            &kp Z       &kp W       &kp X               &kp U       &kp UP      &kp O
-                &kp LSHIFT  &kp A       &kp S       &kp D               &kp LEFT    &kp DOWN    &kp RIGHT   &kp E
+                            &kp Z       &kp W       &kp X               &kp U       &kp I       &kp O
+                &kp LSHIFT  &kp A       &kp S       &kp D               &kp J       &kp K       &kp L       &kp H
 
-                                        &kp SPACE   &mo GM2             &kp R       &kp P
+                                        &kp SPACE   &mo GM2             &kp N       &kp M
             >;
         };
 
