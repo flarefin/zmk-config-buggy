@@ -744,7 +744,7 @@
         gaming1 {
             bindings = <
                             &kp Z       &kp W       &kp X               &kp U       &kp I       &kp O
-                &kp LSHIFT  &kp A       &kp S       &kp D               &kp J       &kp K       &kp L       &kp H
+                &kp LSHIFT  &kp A       &kp S       &kp D               &kp J       &kp K       &kp L       &kp ENTER
 
                                         &kp SPACE   &mo GM2             &kp N       &kp M
             >;
@@ -755,7 +755,7 @@
                             &kp TAB     &kp V       &o_volup            &kp K       &kp Q       &kp COMMA
                 &kp ESC     &kp T       &kp B       &o_voldown          &kp F       &kp F4      &kp DOT     &to A1
 
-                                        &none       &none               &kp ENTER   &kp BSPC
+                                        &none       &none               &kp H       &kp BSPC
             >;
         };
 
